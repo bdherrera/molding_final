@@ -34,7 +34,7 @@ public class UserController implements Serializable {
 
             // Redirigir a la página correspondiente según el usuario autenticado
             if (getUser().getUsername().equals("Administrador")) {
-                return "administrador/tableroAdministrador.xhtml?faces-redirect=true";
+                return "/administrador/tableroAdministrador.xhtml?faces-redirect=true";
             } else if (getUser().getUsername().equals("ResidenteDeobra")) {
                 return "ResidenteDeobra/tableroResidente.xhtml?faces-redirect=true";
             } else if (getUser().getUsername().equals("AsistenteAdministrativo")) {
@@ -72,7 +72,7 @@ public class UserController implements Serializable {
         // Verificar si el usuario existe en la base de datos
         // y si la contraseña es correcta
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_molding4_war_1.0-SNAPSHOTPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("molding5");
         EntityManager em = emf.createEntityManager();
 
         boolean isValid = false;
@@ -95,7 +95,7 @@ public class UserController implements Serializable {
 
     private boolean isValidRegistration(String username, String password) {
         // Verificar si el nombre de usuario ya existe en la base de datos
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_molding34_war_1.0-SNAPSHOTPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("molding5");
         EntityManager em = emf.createEntityManager();
         boolean isValid = true;
         try {
@@ -116,7 +116,7 @@ public class UserController implements Serializable {
 
     private void insertUser(String username, String password) {
         // Insertar un nuevo usuario en la base de datos
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_molding4_war_1.0-SNAPSHOTPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("molding5");
         EntityManager em = emf.createEntityManager();
 
         try {

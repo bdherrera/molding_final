@@ -1,0 +1,49 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+
+*/
+/* 
+    Created on : 16/12/2022, 01:38:06 AM
+    Author     : Dell
+*/
+
+#cabecera {
+    background-color: #000;
+    
+    
+}
+
+.superior {
+    background-color: #000;
+    
+}
+
+#logo {
+    border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        
+}
+
+.menublanco {
+    color: #ffffff;
+    
+}
+
+.btn-verde{
+    background-color: #46FF00;
+    color: #000;
+}
+.verde {
+    color: #46FF00;
+}
+
+.body{
+    background-color: #303030;
+}
+
+.habita {
+    background-color: #46FF00;
+    
+}

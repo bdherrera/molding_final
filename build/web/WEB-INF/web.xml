@@ -27,10 +27,25 @@
         <url-pattern>/administrador/signin.xhtml</url-pattern>
     </servlet-mapping>
     
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/administrador/tableroAdministrador.xhtml</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/administrador/Clientes.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/administrador/Contratistas.xhtml</url-pattern>
+    </servlet-mapping>
     
-
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/administrador/Inventarios.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/administrador/Proveedores.xhtml</url-pattern>
+    </servlet-mapping>
 </web-app>

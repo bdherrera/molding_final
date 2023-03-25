@@ -58,5 +58,8 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/administrador/ActualizarInventario.xhtml</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/administrador/ActualizarOrdenEntrada.xhtml</url-pattern>
+    </servlet-mapping>
 </web-app>

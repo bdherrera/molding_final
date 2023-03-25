@@ -252,6 +252,7 @@
 
                                         <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrar Materiales </button>
                                         <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#OrdenEntrada">Registrar Orden de entrada </button>
+                                        <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#OrdenSalida">Registrar Orden de salida </button>
                                     </div>
                                 </div>
 
@@ -389,6 +390,84 @@
                                     </div>
                                 </div>
 
+                                <!-- modal orden de salida-->
+                                <!-- Modal -->
+                                <div class="modal fade" id="OrdenSalida" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Registrar Orden de salida</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h:form>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controllerOrdenSalida.orden.nombreMaterial}" id="material" class="form-control"  />
+                                                                <label for="material">Nombre del Material</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 mt-3">
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controllerOrdenSalida.orden.nombreContratista}" id="contratista" class="form-control" />
+                                                                <label for="nombre">Nombre Contratista</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 mt-3">
+
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controllerOrdenSalida.orden.cantidad}" id="cantidad" class="form-control" />
+                                                                <label for="cantidad">Cantidad</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 mt-3">
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controllerOrdenSalida.orden.fechaEntrada}" id="fechaEntrada" class="form-control" />
+                                                                <label for="fechaEntrada">Fecha de Entrada</label>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="col-12 mt-3">
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controllerOrdenSalida.orden.fechaSalida}" id="fechaSalida" class="form-control" />
+                                                                <label for="fechaSalida">Fecha de salida</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 mt-3">
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controllerOrdenSalida.orden.direccion}" id="descripcion" class="form-control" />
+                                                                <label for="descripcion">direcci'on de obra</label>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+                                                        <div class="d-grid gap-2" style="padding-top: 15px">
+                                                            <h:form>
+                                                                <h:commandButton action="#{controllerOrdenSalida.create()}" class="btn btn-primary" value="Guardar"></h:commandButton>
+                                                                <p>#{controllerContratistas.mensaje}</p>
+                                                            </h:form>
+
+                                                        </div>
+
+
+                                                    </div>
+
+
+
+                                                </h:form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>  
+
 
 
 
@@ -425,7 +504,7 @@
                                                         <h:outputText value="#{item.nombre}"/>
                                                     </h:column>
                                                     <h:column>
-                                                         <f:facet name="header">Opciones</f:facet>
+                                                        <f:facet name="header">Opciones</f:facet>
                                                         <h:form>
                                                             <h:commandButton action="#{controllerMateriales.delete(item.idMateriales)}" class="btn btn-danger" value="Eliminar"></h:commandButton> 
                                                             <h:commandButton class="btn btn-warning" action="ActualizarInventario.xhtml" value="Actualizar" ></h:commandButton>
@@ -503,6 +582,71 @@
                                     </div>
 
                                 </div>
+                                <!--orden de salida-->
+                                
+                                
+                                <div class="card">
+                                    <div class="card-body ">
+                                        <div class="table-responsive">
+                                            <h1>Orden de Salida</h1>
+
+                                            <h:dataTable id="tabla"  class="table table-secondary table-striped"  value="#{controllerOrdenSalida.getALLOrdenSalida()}" var="OrdenSalida">
+
+                                                <tbody>
+
+                                                    <h:column>
+                                                        <f:facet name="header">Id</f:facet>
+                                                        <h:outputText value="#{OrdenSalida.idOrden}"></h:outputText>
+
+                                                    </h:column>
+                                                    <h:column>
+                                                        <f:facet name="header">Nombre Material</f:facet>
+                                                        <h:outputText value="#{OrdenSalida.nombreMaterial}"> </h:outputText>
+                                                    </h:column>
+
+
+                                                    <h:column>
+                                                        <f:facet name="header">Nombre Contratista</f:facet>
+                                                        <h:outputText value="#{OrdenSalida.nombreContratista}"></h:outputText>
+                                                    </h:column>
+                                                    <h:column>
+                                                        <f:facet name="header">Cantidad</f:facet>
+                                                        <h:outputText value="#{OrdenSalida.cantidad}"></h:outputText>
+                                                    </h:column>
+                                                    <h:column>
+                                                        <f:facet name="header">Fecha Entrada</f:facet>
+                                                        <h:outputText value="#{OrdenSalida.fechaEntrada}"></h:outputText>
+                                                    </h:column>
+                                                    <h:column>
+                                                        <f:facet name="header">Fecha salida</f:facet>
+                                                        <h:outputText value="#{OrdenSalida.fechaSalida}"></h:outputText>
+                                                    </h:column>
+                                                    <h:column>
+                                                        <f:facet name="header">Dirección</f:facet>
+                                                        <h:outputText value="#{OrdenSalida.direccion}"></h:outputText>
+                                                    </h:column>
+
+
+                                                    <h:column>
+                                                        <f:facet name="header">OPCIONES</f:facet>
+                                                        <h:form style="padding-top: 10px">
+                                                            <h:commandButton action="ActualizarOrdenSalida.xhtml" class="btn btn-warning" value="Actualizar"></h:commandButton>
+                                                        </h:form>
+
+                                                        <h:form style="padding-top: 10px">
+                                                            <h:commandButton action="#{controllerOrdenSalida.delete(OrdenSalida.idOrden)}" class="btn btn-danger" value="Eliminar"></h:commandButton>
+                                                        </h:form>
+
+                                                    </h:column>
+
+                                                </tbody>
+                                            </h:dataTable>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
 
 
 

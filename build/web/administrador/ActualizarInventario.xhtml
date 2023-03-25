@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
         <title>molding</title>
 
@@ -28,8 +27,7 @@
 
     </h:head>
     <h:body>
-
-        <!-- [ navigation menu ] start -->
+           <!-- [ navigation menu ] start -->
         <nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
             <div class="navbar-wrapper ">
                 <div class="navbar-brand header-logo">
@@ -229,7 +227,7 @@
                                         <div class="row align-items-center">
                                             <div class="col-md-12">
                                                 <div class="page-header-title">
-                                                    <h5>Contratistas</h5>
+                                                    <h5>Inventarios</h5>
                                                 </div>
                                                 <ul class="breadcrumb">
                                                     <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
@@ -243,38 +241,33 @@
                                 <!-- [ Main Content ] start -->
 
                                 <div class="card">
-                                    <f:view>
+                                    
 
 
                                         <h:form class="form-group " >
                                             <h1><h:outputText value="Create/Edit"/></h1>
                                             <h:panelGrid columns="2">
 
-                                                <h:outputLabel  value="Idcontratistas:" for="idcontratistas" />
-                                                <h:inputText class="form-control" id="idcontratistas" value="#{controllerContratistas.contratista.idcontratistas}" title="Idcontratistas" required="true" requiredMessage="The Idcontratistas field is required."/>
-                                                <h:outputLabel value="NombreContratista:" for="nombreContratista" />
-                                                <h:inputText class="form-control" id="nombreContratista" value="#{controllerContratistas.contratista.nombreContratista}" title="NombreContratista" />
-                                                <h:outputLabel value="FechaContrato:" for="fechaContrato" />
-                                                <h:inputText class="form-control" id="fechaContrato" value="#{controllerContratistas.contratista.fechaContrato}" title="FechaContrato" />
-                                                <h:outputLabel  value="Telefono:" for="telefono" />
-                                                <h:inputText class="form-control" id="telefono" value="#{controllerContratistas.contratista.telefono}" title="Telefono" />
-                                                <h:outputLabel value="DireccionObra:" for="direccionObra" />
-                                                <h:inputText class="form-control" id="direccionObra" value="#{controllerContratistas.contratista.direccionObra}" title="DireccionObra" />
-                                                <h:outputLabel value="Correo:" for="correo" />
-                                                <h:inputText class="form-control" id="correo" value="#{controllerContratistas.contratista.correo}" title="Correo" />
-                                                <h:outputLabel value="ValorContrato:" for="valorContrato" />
-                                                <h:inputText class="form-control" id="valorContrato" value="#{controllerContratistas.contratista.valorContrato}" title="ValorContrato" />
+                                                <h:outputLabel  value="Idmateriales:" for="idmateriales" />
+                                                <h:inputText class="form-control" id="idmateriales" value="#{controllerMateriales.material.idMateriales}" title="Idmateriales" required="true" requiredMessage="The Idmateriales field is required."/>
+                                                <h:outputLabel value="NombreMateriales:" for="nombreMateriales" />
+                                                <h:inputText class="form-control" id="nombreMateriales" value="#{controllerMateriales.material.nombre}" title="NombreMateriales" />
+                                                <h:outputLabel value="cantidad:" for="cantidad" />
+                                                <h:inputText class="form-control" id="cantidad" value="#{controllerMateriales.material.cantidad}" title="cantidad" />
+                                                <h:outputLabel  value="estado:" for="estado" />
+                                                <h:inputText class="form-control" id="estado" value="#{controllerMateriales.material.estado}" title="estado" />
+                                                
                                             </h:panelGrid>
 
-                                            <h:commandButton action="#{controllerContratistas.update(controllerContratistas.contratista.idcontratistas)}" value="Acrualizar" class="btn btn-primary"></h:commandButton>
-                                            <h:commandButton class="btn btn-warning" action="Contratistas.xhtml" value="Volver" ></h:commandButton>
+                                            <h:commandButton action="#{controllerMateriales.update(controllerMateriales.material.idMateriales)}" value="Acrualizar" class="btn btn-primary"></h:commandButton>
+                                            <h:commandButton class="btn btn-warning" action="Inventarios.xhtml" value="Volver" ></h:commandButton>
 
 
 
                                            
                                            
                                         </h:form>
-                                    </f:view>
+                                    
 
 
                                 </div>
@@ -316,8 +309,6 @@
 
 
         <!-- cdn jquery -->
-
-
     </h:body>
 </html>
 

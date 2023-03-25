@@ -582,7 +582,86 @@
                                     </div>
 
                                 </div>
+
                                 <!--orden de salida-->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-body ">
+                                            <div class="table-responsive">
+                                                <h1>Orden de Salida</h1>
+
+                                                <f:view>
+
+
+                                                    <h:form>
+
+                                                        <h:dataTable class="table" value="#{controllerOrdenSalida.ALLOrdenSalida}" var="item">
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    IdOrden
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.idOrden}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    NombreMaterial
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.nombreMaterial}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    <h:outputText value="NombreContratista"/>
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.nombreContratista}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header" >
+                                                                    Cantidad
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.cantidad}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    FechaSalida
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.fechaSalida}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    FechaEntrada
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.fechaEntrada}"/>
+                                                            </h:column>
+                                                            <h:column>
+                                                                <f:facet name="header">
+                                                                    Direccion
+                                                                </f:facet>
+                                                                <h:outputText value="#{item.direccion}"/>
+                                                            </h:column>
+                                                              <h:column>
+                                                        <f:facet name="header">Opciones</f:facet>
+                                                        <h:form>
+                                                            <h:commandButton value="Actualizar" action="ActualizarOrdenSalida.xhtml" class="btn btn-warning"></h:commandButton>
+                                                        </h:form>
+                                                        <h:form style="padding-top: 10px">
+                                                            <h:commandButton action="#{controllerOrdenEntrada.eliminar(item.idMateriales)}" class="btn btn-danger" value="Eliminar"></h:commandButton>
+                                                        </h:form>
+
+                                                    </h:column>
+                                                        </h:dataTable>
+                                                    </h:form>
+                                                </f:view>
+
+
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <!--orden de salida
                                 
                                 
                                 <div class="card">
@@ -645,7 +724,7 @@
                                         </div>
                                     </div>
 
-                                </div>
+                                </div> -->
 
 
 

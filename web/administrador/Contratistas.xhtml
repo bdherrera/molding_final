@@ -353,52 +353,53 @@
                                             <h1><h:outputText value="Contratistas"/></h1>
                                             <h:dataTable id="example" value="#{controllerContratistas.ALLContratistas}" var="item" class="table" >
                                                 <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="Idcontratistas"/>
-                                                    </f:facet>
+                                                    <f:facet name="header">id</f:facet>
+
+                                                    <h:outputText value="Idcontratistas"/>
+
                                                     <h:outputText value="#{item.idcontratistas}"/>
                                                 </h:column>
 
                                                 <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="Rut"/>
-                                                    </f:facet>
+
+                                                    <f:facet name="header">rut</f:facet>
+
                                                     <h:outputText value="#{item.rut}"/>
                                                 </h:column>
                                                 <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="NombreContratista"/>
-                                                    </f:facet>
+                                                    <f:facet name="header"> Nombre contratista</f:facet>
+
+                                                    
+
                                                     <h:outputText value="#{item.nombreContratista}"/>
                                                 </h:column>
                                                 <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="FechaContrato"/>
-                                                    </f:facet>
+
+                                                    <f:facet name="header">Fecha de Contrato</f:facet>
+
                                                     <h:outputText value="#{item.fechaContrato}"/>
                                                 </h:column>
                                                 <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="Telefono"/>
-                                                    </f:facet>
+
+                                                    <f:facet name="header">Teléfono</f:facet>
+
                                                     <h:outputText value="#{item.telefono}"/>
                                                 </h:column>
                                                 <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="DireccionObra"/>
-                                                    </f:facet>
+
+                                                   <f:facet name="header">Direccion de obra</f:facet>
                                                     <h:outputText value="#{item.direccionObra}"/>
                                                 </h:column>
                                                 <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="Correo"/>
-                                                    </f:facet>
+
+                                                    <f:facet name="header">Correo</f:facet>
+
                                                     <h:outputText value="#{item.correo}"/>
                                                 </h:column>
                                                 <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="ValorContrato"/>
-                                                    </f:facet>
+
+                                                    <f:facet name="header">Valor del contrato</f:facet>
+
                                                     <h:outputText value="#{item.valorContrato}"/>
                                                 </h:column>
                                                 <h:column>
@@ -406,7 +407,7 @@
                                                         <h:commandButton action="#{controllerContratistas.eliminar(item.idcontratistas)}" class="btn btn-danger" value="Eliminar"></h:commandButton> 
                                                         <h:commandButton class="btn btn-warning" action="ActualizarContratistas.xhtml" value="Actualizar" ></h:commandButton>
                                                     </h:form>
-                                                    
+
                                                 </h:column>
 
                                             </h:dataTable>

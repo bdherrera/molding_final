@@ -4,11 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Admin/OneDrive/Documentos/NetBeansProjects/molding5/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/Admin/OneDrive/Documentos/NetBeansProjects/molding5/src/conf/persistence.xml</file>
-            <file>file:/C:/Users/Admin/OneDrive/Documentos/NetBeansProjects/molding5/src/java/service/ClientesFacade.java</file>
-            <file>file:/C:/Users/Admin/OneDrive/Documentos/NetBeansProjects/molding5/web/administrador/signin.xhtml</file>
-            <file>file:/C:/Users/Admin/OneDrive/Documentos/NetBeansProjects/molding5/src/java/controller/UserController.java</file>
-            <file>file:/C:/Users/Admin/OneDrive/Documentos/NetBeansProjects/molding5/web/administrador/tableroAdministrador.xhtml</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documentos/NetBeansProjects/molding5/src/java/controller/controllerContratistas.java</file>
+            <file>file:/C:/Users/Admin/OneDrive/Documentos/NetBeansProjects/molding5/web/administrador/Contratistas.xhtml</file>
         </group>
     </open-files>
 </project-private>

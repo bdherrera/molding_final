@@ -48,4 +48,10 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/administrador/Proveedores.xhtml</url-pattern>
     </servlet-mapping>
+    
+     <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/administrador/ActualizarContratistas.xhtml</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

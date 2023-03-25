@@ -26,11 +26,8 @@
         <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css"/>
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 
-
     </h:head>
     <h:body>
-
-
 
         <!-- [ navigation menu ] start -->
         <nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
@@ -246,96 +243,44 @@
                                 <!-- [ Main Content ] start -->
 
                                 <div class="card">
-                                    <div class="card-header">
-                                        <h5>Opciones</h5>
-                                    </div>
-                                    <div class="card-body">
+                                    <f:view>
 
-                                        <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Registrar Contratistas</button>
-                                    </div>
+
+                                        <h:form class="form-group " >
+                                            <h1><h:outputText value="Create/Edit"/></h1>
+                                            <h:panelGrid columns="2">
+
+                                                <h:outputLabel  value="Idcontratistas:" for="idcontratistas" />
+                                                <h:inputText class="form-control" id="idcontratistas" value="#{controllerContratistas.contratista.idcontratistas}" title="Idcontratistas" required="true" requiredMessage="The Idcontratistas field is required."/>
+                                                <h:outputLabel value="NombreContratista:" for="nombreContratista" />
+                                                <h:inputText class="form-control" id="nombreContratista" value="#{controllerContratistas.contratista.nombreContratista}" title="NombreContratista" />
+                                                <h:outputLabel value="FechaContrato:" for="fechaContrato" />
+                                                <h:inputText class="form-control" id="fechaContrato" value="#{controllerContratistas.contratista.fechaContrato}" title="FechaContrato" />
+                                                <h:outputLabel  value="Telefono:" for="telefono" />
+                                                <h:inputText class="form-control" id="telefono" value="#{controllerContratistas.contratista.telefono}" title="Telefono" />
+                                                <h:outputLabel value="DireccionObra:" for="direccionObra" />
+                                                <h:inputText class="form-control" id="direccionObra" value="#{controllerContratistas.contratista.direccionObra}" title="DireccionObra" />
+                                                <h:outputLabel value="Correo:" for="correo" />
+                                                <h:inputText class="form-control" id="correo" value="#{controllerContratistas.contratista.correo}" title="Correo" />
+                                                <h:outputLabel value="ValorContrato:" for="valorContrato" />
+                                                <h:inputText class="form-control" id="valorContrato" value="#{controllerContratistas.contratista.valorContrato}" title="ValorContrato" />
+                                            </h:panelGrid>
+
+                                            <h:commandButton action="#{controllerContratistas.update(controllerContratistas.contratista.idcontratistas)}" value="Acrualizar" class="btn btn-primary"></h:commandButton>
+                                            <h:commandButton class="btn btn-warning" action="Actualizar.xhtml" value="Actualizar" ></h:commandButton>
+
+
+
+                                           
+                                           
+                                        </h:form>
+                                    </f:view>
+
+
                                 </div>
 
 
 
-                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Registrar contratista</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h:form >
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <div class="form-floating">
-                                                                <h:inputText value="#{controllerContratistas.contratista.rut}" id="rut" class="form-control"  />
-                                                                <label for="rut">Rut</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 mt-3">
-                                                            <div class="form-floating">
-                                                                <h:inputText value="#{controllerContratistas.contratista.nombreContratista}" id="nombre" class="form-control" />
-                                                                <label for="nombre">Nombre Contratista</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 mt-3">
-
-                                                            <div class="form-floating">
-                                                                <h:inputText value="#{controllerContratistas.contratista.telefono}" id="telefono" class="form-control" />
-                                                                <label for="telefono">Telefono</label>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="col-12 mt-3">
-                                                            <div class="form-floating">
-                                                                <h:inputText value="#{controllerContratistas.contratista.correo}" id="correo" class="form-control" />
-                                                                <label for="correo">Correo</label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-12 mt-3">
-                                                            <div class="form-floating">
-                                                                <h:inputText value="#{controllerContratistas.contratista.direccionObra}" id="descripcion" class="form-control" />
-                                                                <label for="descripcion">Direccion obra</label>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="col-12 mt-3">
-                                                            <div class="form-floating">
-                                                                <h:inputText value="#{controllerContratistas.contratista.fechaContrato}" id="fecha" class="form-control" />
-                                                                <label for="fecha">Fecha de contrato</label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 mt-3">
-                                                            <div class="form-floating">
-                                                                <h:inputText value="#{controllerContratistas.contratista.valorContrato}" id="valor" class="form-control" />
-                                                                <label for="valor">Valor del contrato</label>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <div class="d-grid gap-2" style="padding-top: 15px">
-                                                            <h:form>
-                                                                <h:commandButton action="#{controllerContratistas.create()}" class="btn btn-primary" value="Guardar"></h:commandButton>
-                                                                <p>#{controllerContratistas.mensaje}</p>
-                                                            </h:form>
-
-                                                        </div>
-
-
-                                                    </div>
-
-
-
-                                                </h:form>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div><!-- fin del modal -->
 
 
 
@@ -345,76 +290,6 @@
 
 
 
-
-                                <div class="card">
-                                    <div class="card-body table-border-style">
-                                        <div class="table-responsive">
-
-                                            <h1><h:outputText value="Contratistas"/></h1>
-                                            <h:dataTable id="example" value="#{controllerContratistas.ALLContratistas}" var="item" class="table" >
-                                                <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="Idcontratistas"/>
-                                                    </f:facet>
-                                                    <h:outputText value="#{item.idcontratistas}"/>
-                                                </h:column>
-
-                                                <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="Rut"/>
-                                                    </f:facet>
-                                                    <h:outputText value="#{item.rut}"/>
-                                                </h:column>
-                                                <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="NombreContratista"/>
-                                                    </f:facet>
-                                                    <h:outputText value="#{item.nombreContratista}"/>
-                                                </h:column>
-                                                <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="FechaContrato"/>
-                                                    </f:facet>
-                                                    <h:outputText value="#{item.fechaContrato}"/>
-                                                </h:column>
-                                                <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="Telefono"/>
-                                                    </f:facet>
-                                                    <h:outputText value="#{item.telefono}"/>
-                                                </h:column>
-                                                <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="DireccionObra"/>
-                                                    </f:facet>
-                                                    <h:outputText value="#{item.direccionObra}"/>
-                                                </h:column>
-                                                <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="Correo"/>
-                                                    </f:facet>
-                                                    <h:outputText value="#{item.correo}"/>
-                                                </h:column>
-                                                <h:column>
-                                                    <f:facet name="header">
-                                                        <h:outputText value="ValorContrato"/>
-                                                    </f:facet>
-                                                    <h:outputText value="#{item.valorContrato}"/>
-                                                </h:column>
-                                                <h:column>
-                                                    <h:form>
-                                                        <h:commandButton action="#{controllerContratistas.eliminar(item.idcontratistas)}" class="btn btn-danger" value="Eliminar"></h:commandButton> 
-                                                        <h:commandButton class="btn btn-warning" action="ActualizarContratistas.xhtml" value="Actualizar" ></h:commandButton>
-                                                    </h:form>
-                                                    
-                                                </h:column>
-
-                                            </h:dataTable>
-
-                                        </div>
-                                    </div>
-
-                                </div>
                                 <!-- [ Main Content ] end -->
                             </div>
                         </div>
@@ -441,28 +316,6 @@
 
 
         <!-- cdn jquery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-
-
-        <script >
-            $(document).ready(function () {
-                $('#example').DataTable({
-
-                    buttons: [
-                        {
-                            extend: 'copy',
-                            text: 'Copy to clipboard'
-                        },
-                        'excel',
-                        'pdf'
-                    ]
-
-                });
-            });
-        </script>
-        <!-- fin cdn -->
 
 
     </h:body>

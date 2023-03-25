@@ -33,7 +33,7 @@ public class UserController implements Serializable {
             session.setAttribute("user", getUser());
 
             // Redirigir a la página correspondiente según el usuario autenticado
-            if (getUser().getUsername().equals("sindi")) {
+            if (getUser().getUsername().equals("Administrador")) {
                 return "/administrador/tableroAdministrador.xhtml?faces-redirect=true";
             } else if (getUser().getUsername().equals("ResidenteDeobra")) {
                 return "ResidenteDeobra/tableroResidente.xhtml?faces-redirect=true";

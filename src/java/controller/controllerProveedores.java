@@ -35,13 +35,13 @@ public class controllerProveedores implements Serializable {
 
     }
 
-    public void eliminar(int id) {
+    public void Delete(int id) {
         Proveedores proveedor = new Proveedores();
-        proveedor.setIdproveedores(id); 
+        proveedor.setCodproveedores(id); 
         getProveedoresfacade().remove(proveedor);
     } 
     public void update(int id){
-        getProveedores().setIdproveedores(id);
+        getProveedores().setCodproveedores(id);
         getProveedoresfacade().edit(getProveedores());    
         
     } 

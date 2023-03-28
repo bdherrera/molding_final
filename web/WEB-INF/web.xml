@@ -24,7 +24,7 @@
   
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>/administrador/signin.xhtml</url-pattern>
+        <url-pattern>/signin.xhtml</url-pattern>
     </servlet-mapping>
     
     <servlet-mapping>
@@ -66,5 +66,31 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/administrador/ActualizarOrdenSalida.xhtml</url-pattern>
     </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/administrador/OrdenSalida.xhtml</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+         <servlet-name>Faces Servlet</servlet-name>
+         <url-pattern>/administrador/ordenEntrada.xhtml</url-pattern>
+     </servlet-mapping>
+     
+      <servlet-mapping>
+         <servlet-name>Faces Servlet</servlet-name>
+         <url-pattern>/administrador/ActualizarProveedores.xhtml</url-pattern>
+     </servlet-mapping>
+     
+      <servlet-mapping>
+         <servlet-name>Faces Servlet</servlet-name>
+         <url-pattern>/Cliente/tableroCliente.xhtml</url-pattern>
+     </servlet-mapping>
+      <servlet-mapping>
+         <servlet-name>Faces Servlet</servlet-name>
+         <url-pattern>/Cliente/Clientes.xhtml</url-pattern>
+     </servlet-mapping>
+           <servlet-mapping>
+         <servlet-name>Faces Servlet</servlet-name>
+         <url-pattern>/ResidenteDeobra/tableroResidente.xhtml</url-pattern>
+     </servlet-mapping>
     
 </web-app>

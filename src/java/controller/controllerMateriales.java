@@ -45,7 +45,7 @@ public class controllerMateriales implements Serializable {
     public void delete(int id) {
         Materiales materiales = new Materiales();
         materiales.setIdMateriales(id);
-        getMaterialfacade().remove(getMaterial());
+        materialfacade.remove(materiales);
         setMessage("Se elimino material correctamente");
     }
 

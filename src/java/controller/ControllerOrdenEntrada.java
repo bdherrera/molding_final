@@ -40,7 +40,7 @@ public class ControllerOrdenEntrada implements Serializable {
     public void eliminar(int id) {
         OrdenEntrada ordenEntrada = new OrdenEntrada();
         ordenEntrada.setIdOrdenEntrada(id);
-        getEntradafacade().remove(getEntrada());
+        getEntradafacade().remove(ordenEntrada);
         
        
     }

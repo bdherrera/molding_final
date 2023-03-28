@@ -247,11 +247,13 @@
 
 
                                         <h:form class="form-group " >
-                                            <h1><h:outputText value="Create/Edit"/></h1>
+                                            <h1><h:outputText value="Actualizar"/></h1>
                                             <h:panelGrid columns="2">
 
                                                 <h:outputLabel  value="Idcontratistas:" for="idcontratistas" />
                                                 <h:inputText class="form-control" id="idcontratistas" value="#{controllerContratistas.contratista.idcontratistas}" title="Idcontratistas" required="true" requiredMessage="The Idcontratistas field is required."/>
+                                                 <h:outputLabel  value="Rut:" for="Rut" />
+                                                 <h:inputText class="form-control" id="Rut" value="#{controllerContratistas.contratista.rut}" title="Rut" required="true" requiredMessage="The Idcontratistas field is required."/>
                                                 <h:outputLabel value="NombreContratista:" for="nombreContratista" />
                                                 <h:inputText class="form-control" id="nombreContratista" value="#{controllerContratistas.contratista.nombreContratista}" title="NombreContratista" />
                                                 <h:outputLabel value="FechaContrato:" for="fechaContrato" />
@@ -266,7 +268,7 @@
                                                 <h:inputText class="form-control" id="valorContrato" value="#{controllerContratistas.contratista.valorContrato}" title="ValorContrato" />
                                             </h:panelGrid>
 
-                                            <h:commandButton action="#{controllerContratistas.update(controllerContratistas.contratista.idcontratistas)}" value="Acrualizar" class="btn btn-primary"></h:commandButton>
+                                            <h:commandButton action="#{controllerContratistas.update(controllerContratistas.contratista.idcontratistas)}" value="Actualizar" class="btn btn-primary"></h:commandButton>
                                             <h:commandButton class="btn btn-warning" action="Contratistas.xhtml" value="Volver" ></h:commandButton>
 
 

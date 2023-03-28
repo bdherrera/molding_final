@@ -49,7 +49,7 @@
         <url-pattern>/administrador/Proveedores.xhtml</url-pattern>
     </servlet-mapping>
     
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/administrador/ActualizarContratistas.xhtml</url-pattern>
     </servlet-mapping>
@@ -66,31 +66,156 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/administrador/ActualizarOrdenSalida.xhtml</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/administrador/OrdenSalida.xhtml</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
-         <servlet-name>Faces Servlet</servlet-name>
-         <url-pattern>/administrador/ordenEntrada.xhtml</url-pattern>
-     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/administrador/ordenEntrada.xhtml</url-pattern>
+    </servlet-mapping>
      
-      <servlet-mapping>
-         <servlet-name>Faces Servlet</servlet-name>
-         <url-pattern>/administrador/ActualizarProveedores.xhtml</url-pattern>
-     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/administrador/ActualizarProveedores.xhtml</url-pattern>
+    </servlet-mapping>
      
-      <servlet-mapping>
-         <servlet-name>Faces Servlet</servlet-name>
-         <url-pattern>/Cliente/tableroCliente.xhtml</url-pattern>
-     </servlet-mapping>
-      <servlet-mapping>
-         <servlet-name>Faces Servlet</servlet-name>
-         <url-pattern>/Cliente/Clientes.xhtml</url-pattern>
-     </servlet-mapping>
-           <servlet-mapping>
-         <servlet-name>Faces Servlet</servlet-name>
-         <url-pattern>/ResidenteDeobra/tableroResidente.xhtml</url-pattern>
-     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Cliente/tableroCliente.xhtml</url-pattern>
+    </servlet-mapping>
     
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Cliente/Clientes.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/tableroResidente.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/Clientes.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/Contratistas.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/Inventarios.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/Proveedores.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/tableroAsistente.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/OrdenSalida.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/ordenEntrada.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/AcrualizarOrdenEntrada.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/ActualizarOrdenSalida.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/ActualizarProveedores.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/ActualizarClientes.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/ActualizarInventario.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/AsistenteAdministrativo/ActualizarContratistas.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Almacenista/tableroAlmacenista.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Almacenista/ordenEntrada.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Almacenista/Proveedores.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Almacenista/OrdenSalida.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Almacenista/OrdenSalida.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Almacenista/Inventarios.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Almacenista/ActualizarProveedores.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Almacenista/ActualizarOrdenSalida.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Almacenista/ActualizarOrdenEntrada.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/Almacenista/ActualizarInventario.xhtml</url-pattern>
+    </servlet-mapping>
 </web-app>

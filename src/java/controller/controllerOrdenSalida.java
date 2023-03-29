@@ -25,9 +25,8 @@ public class controllerOrdenSalida implements Serializable {
      */
     public controllerOrdenSalida() {
     }
-    
-    //creacion de las variables
 
+    //creacion de las variables
     private String message;
 
     private OrdenSalida orden = new OrdenSalida();
@@ -35,10 +34,8 @@ public class controllerOrdenSalida implements Serializable {
     @EJB
 
     private OrdenSalidaFacade ordensalida;
-    
-    
-    //crud orden de salida
 
+    //crud orden de salida
     public List<OrdenSalida> getALLOrdenSalida() {
         return getOrdensalida().findAll();
     }
@@ -47,7 +44,7 @@ public class controllerOrdenSalida implements Serializable {
 
         OrdenSalida Salida = new OrdenSalida();
         Salida.setIdOrden(id);
-        getOrdensalida().remove(Salida);
+        ordensalida.remove(Salida);
         setMessage("se elimino correctamente");
     }
 
@@ -57,10 +54,16 @@ public class controllerOrdenSalida implements Serializable {
     }
 
     public void update(int id) {
-
-        getOrden().setIdOrden(id);
-        getOrdensalida().edit(getOrden());
-        setMessage("se actualizo correctamente");
+        orden = ordensalida.find(id);
+        if (orden != null) {
+            getOrden().setIdOrden(id);
+            
+            // asignar valores de otras propiedades
+            getOrdensalida().edit(orden);
+            setMessage("Se actualizó correctamente");
+        } else {
+            setMessage("No se encontró la orden con ID " + id);
+        }
 
     }
 
@@ -105,8 +108,5 @@ public class controllerOrdenSalida implements Serializable {
     public void setOrdensalida(OrdenSalidaFacade ordensalida) {
         this.ordensalida = ordensalida;
     }
-    
-    
-    
 
 }

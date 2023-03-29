@@ -245,10 +245,10 @@
 
 
                                         <h:form class="form-group " >
-                                            <h1><h:outputText value="Create/Edit"/></h1>
+                                            <h1><h:outputText value="Actualizar"/></h1>
                                             <h:panelGrid columns="2">
 
-                                                <h:outputLabel  value="Idmateriales:" for="idmateriales" />
+                                                <h:outputLabel  value="IdMateriales:" for="idmateriales" />
                                                 <h:inputText class="form-control" id="idmateriales" value="#{controllerMateriales.material.idMateriales}" title="Idmateriales" required="true" requiredMessage="The Idmateriales field is required."/>
                                                 <h:outputLabel value="NombreMateriales:" for="nombreMateriales" />
                                                 <h:inputText class="form-control" id="nombreMateriales" value="#{controllerMateriales.material.nombre}" title="NombreMateriales" />
@@ -259,9 +259,9 @@
                                                 
                                             </h:panelGrid>
 
-                                            <h:commandButton action="#{controllerMateriales.update(controllerMateriales.material.idMateriales)}" value="Acrualizar" class="btn btn-primary"></h:commandButton>
-                                            <h:commandButton class="btn btn-warning" action="Inventarios.xhtml" value="Volver" ></h:commandButton>
-
+                                            <h:commandButton action="#{controllerMateriales.update(controllerMateriales.material.idMateriales)}" value="Actualizar" class="btn btn-primary"></h:commandButton>
+                                            
+                                            <h:commandButton action="Inventarios.xhtml" class="btn btn-warning" value="Volver" ></h:commandButton>
 
 
                                            

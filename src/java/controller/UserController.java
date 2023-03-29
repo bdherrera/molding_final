@@ -7,6 +7,7 @@ package controller;
 import Model.Users;
 import java.io.Serializable;
 import java.util.List;
+import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -17,12 +18,18 @@ import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.servlet.http.HttpSession;
+import service.UsersFacade;
+
 
 @ManagedBean
 @RequestScoped
 public class UserController implements Serializable {
 
     private Users user = new Users();
+    
+    @EJB
+    private UsersFacade usersfacade; 
+    
 
     public String authenticate() {
         // Verificar la autenticación del usuario en la base de datos
@@ -139,6 +146,12 @@ public class UserController implements Serializable {
         }
 
     }
+    
+    //list
+    
+     public List<Users> getAllusers() {
+      return usersfacade.findAll();
+    }
 
     // Getters y setters
     /**
@@ -153,6 +166,20 @@ public class UserController implements Serializable {
      */
     public void setUser(Users user) {
         this.user = user;
+    }
+
+    /**
+     * @return the usersfacade
+     */
+    public UsersFacade getUsersfacade() {
+        return usersfacade;
+    }
+
+    /**
+     * @param usersfacade the usersfacade to set
+     */
+    public void setUsersfacade(UsersFacade usersfacade) {
+        this.usersfacade = usersfacade;
     }
 
 }

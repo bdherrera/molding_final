@@ -79,6 +79,11 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/administrador/ActualizarProveedores.xhtml</url-pattern>
     </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/administrador/Usuarios.xhtml</url-pattern>
+    </servlet-mapping>
      
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>

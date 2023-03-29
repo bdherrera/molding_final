@@ -83,9 +83,15 @@
                         <li class="nav-item">
                             <a href="Clientes.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Clientes</span></a>
                         </li>
-                        <li class="nav-item pcoded-menu-caption">
-                            <label></label>
+                       <li class="nav-item">
+                            <h:form>
+                                <p class="nav-link">
+                                    <h:commandButton class="btn btn-danger" value="Cerrar sesión" action="#{userController.logout()}" />
+                                </p>
+                            </h:form>
+
                         </li>
+
 
 
                     </ul>
@@ -325,10 +331,8 @@
                                                 <div class="table-responsive">
                                                     <div class="session-scroll" style="height:478px;position:relative;">
                                                         <h:form>
-                                                            <h1><h:outputText value="Create/Edit"/></h1>
+                                                            <h1><h:outputText value="Create user"/></h1>
                                                             <h:panelGrid columns="2">
-                                                                <h:outputLabel value="Id:" for="id" />
-                                                                <h:inputText id="id" value="#{userController.user.id}" title="Id" required="true" requiredMessage="The Id field is required."/>
                                                                 <h:outputLabel value="Username:" for="username" />
                                                                 <h:inputText id="username" value="#{userController.user.username}" title="Username" required="true" requiredMessage="The Username field is required."/>
                                                                 <h:outputLabel value="Password:" for="password" />
@@ -338,7 +342,7 @@
                                                         </h:form>
                                                         
                                                         
-                                                        <f:view>
+                                                       
 
 
                                                             <h:form>
@@ -364,8 +368,7 @@
                                                                     </h:column>
                                                                 </h:dataTable>
                                                             </h:form>
-                                                        </f:view>
-S
+                                                   
                                                         
                                                         
                                                     </div>
@@ -380,14 +383,13 @@ S
                                                 <h5>Profile</h5>
                                             </div>
                                             <div class="card-body  text-center">
-                                                <div class="usre-image">
+                                               <div class="usre-image">
                                                     <img src="../lite/assets/images/user/avatar-1.jpg" class="img-radius wid-100 m-auto" alt="User-Profile-Image"></img>
-
                                                 </div>
                                                 <h6 class="f-w-600 m-t-25 m-b-10">Administrador</h6>
-                                                <p>Active | Male | Born 23.05.1992</p>
+                                                <p>Construcion | Bogota |  01.04.2023</p>
                                                 <hr></hr>
-                                                <p class="m-t-15">Activity Level: 100%</p>
+                                                <p class="m-t-15">Soluciones Constructivas Habita SAS</p>
                                                 <div class="bg-c-blue counter-block m-t-10 p-20">
                                                     <div class="row">
                                                         <div class="col-4">
@@ -404,7 +406,7 @@ S
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <p class="m-t-15">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                <p class="m-t-15">Proyectos a nivel nacional</p>
                                                 <hr></hr>
                                                 <div class="row justify-content-center user-social-link">
                                                     <div class="col-auto"><a href="#!"><i class="fab fa-facebook-f text-primary f-22"></i></a></div>

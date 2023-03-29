@@ -4,7 +4,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-            <title>molding</title>
+        <title>molding</title>
 
         <!-- Meta -->
         <meta charset="utf-8"></meta>
@@ -23,13 +23,11 @@
         <!-- cdn boostrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"></link>
         <!-- cdn jqr -->
-        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css"/>
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 
-  
+
     </h:head>
     <h:body>
-        
+
 
         <!-- [ navigation menu ] start -->
         <nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
@@ -84,8 +82,13 @@
                         <li class="nav-item">
                             <a href="Clientes.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Clientes</span></a>
                         </li>
-                        <li class="nav-item pcoded-menu-caption">
-                            <label></label>
+                         <li class="nav-item">
+                            <h:form>
+                                <p class="nav-link">
+                                    <h:commandButton class="btn btn-danger" value="Cerrar sesión" action="#{userController.logout()}" />
+                                </p>
+                            </h:form>
+
                         </li>
 
 
@@ -314,14 +317,14 @@
                                                                 <label for="valor">Fecha de Nacimiento</label>
                                                             </div>
                                                         </div>
-                                                         <div class="col-12 mt-3">
+                                                        <div class="col-12 mt-3">
                                                             <div class="form-floating">
                                                                 <h:inputText value="#{controllerClientes.clientes.telefono}" id="telefono" class="form-control" />
                                                                 <label for="valor">Teléfono</label>
                                                             </div>
                                                         </div>
-                                                        
-                                                         <div class="col-12 mt-3">
+
+                                                        <div class="col-12 mt-3">
                                                             <div class="form-floating">
                                                                 <h:inputText value="#{controllerClientes.clientes.tipoContrato}" id="contrato" class="form-control" />
                                                                 <label for="valor">Tipo de Contrato</label>
@@ -363,11 +366,11 @@
                                         <div class="table-responsive">
 
                                             <h1><h:outputText value="Clientes"/></h1>
-                                            <h:dataTable id="example" value="#{controllerClientes.ALLClientes}" var="item" class="table" >
+                                            <h:dataTable id="tabla" value="#{controllerClientes.ALLClientes}" var="item" class="table" >
                                                 <h:column>
                                                     <f:facet name="header">id</f:facet>
 
-                                                   
+
 
                                                     <h:outputText value="#{item.idclientes}"/>
                                                 </h:column>
@@ -381,7 +384,7 @@
                                                 <h:column>
                                                     <f:facet name="header"> apellido</f:facet>
 
-                                                    
+
 
                                                     <h:outputText value="#{item.apellido}"/>
                                                 </h:column>
@@ -399,7 +402,7 @@
                                                 </h:column>
                                                 <h:column>
 
-                                                   <f:facet name="header">Dirección</f:facet>
+                                                    <f:facet name="header">Dirección</f:facet>
                                                     <h:outputText value="#{item.direccion}"/>
                                                 </h:column>
                                                 <h:column>
@@ -412,19 +415,23 @@
                                                     <f:facet name="header">Fecha de Nacimiento</f:facet>
                                                     <h:outputText value="#{item.fechaNacimiento}"/>
                                                 </h:column>
-                                                   <h:column>
+                                                <h:column>
                                                     <f:facet name="header">Teléfono</f:facet>
                                                     <h:outputText value="#{item.telefono}"/>
-                                                   </h:column><!-- comment -->
-                                                      <h:column>
+                                                </h:column><!-- comment -->
+                                                <h:column>
                                                     <f:facet name="header">Tipo de contrato</f:facet>
                                                     <h:outputText value="#{item.tipoContrato}"/>
                                                 </h:column>
                                                 <h:column>
                                                     <h:form>
                                                         <h:commandButton action="#{controllerClientes.eliminar(item.idclientes)}" class="btn btn-danger" value="Eliminar"></h:commandButton> 
-                                                        <h:commandButton class="btn btn-warning" action="ActualizarClientes.xhtml" value="Actualizar" ></h:commandButton>
                                                     </h:form>
+                                                    <h:form>
+                                                        <h:commandButton class="btn btn-warning" action="ActualizarClientes.xhtml" value="Actualizar" ></h:commandButton>
+
+                                                    </h:form>
+
 
                                                 </h:column>
 
@@ -460,24 +467,23 @@
 
 
         <!-- cdn jquery -->
+        <!-- cdn jquery -->
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
 
-
-        <script >
-            $(document).ready(function () {
-                $('#example').DataTable({
-
+        <script>$(document).ready(function () {
+                $('#tabla').DataTable({
+                    dom: 'Bfrtip',
                     buttons: [
-                        {
-                            extend: 'copy',
-                            text: 'Copy to clipboard'
-                        },
-                        'excel',
-                        'pdf'
+                        'copy', 'csv', 'excel', 'pdf', 'print'
                     ]
-
                 });
             });
         </script>

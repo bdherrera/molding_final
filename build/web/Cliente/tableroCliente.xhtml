@@ -23,7 +23,7 @@
 
     </h:head>
     <h:body>
-      
+
 
         <!-- [ navigation menu ] start -->
         <nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
@@ -41,44 +41,46 @@
                             <label>Navigation</label>
                         </li>
                         <li class="nav-item">
-                            <a href="tableroCliente.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero Administrador</span></a>
+                            <a href="tableroCliente.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero cliente</span></a>
                         </li>
                         <li class="nav-item pcoded-menu-caption">
                             <label>Bienvenido al  sistema molding</label>
                         </li>
-                        
-                        
-                            <!--  <a href="#!" class="nav-link">
-                               
-                                <span class="pcoded-micon"><i class="feather icon-box">
-                                    </i></span><span class="pcoded-mtext">Modulos
-                                    </span>
-                            </a>
-                            <ul class="pcoded-submenu">
-                                <li class=""><a href="bc_button.html" class="">ontratistas</a></li>
-                                <li class=""><a href="bc_badges.html" class="">Inventarios</a></li>
-                                <li class=""><a href="bc_breadcrumb-pagination.html" class="">Proveedores</a></li>
-                                <li class=""><a href="bc_collapse.html" class="">clientes</a></li>
 
-                            </ul> -->
-                        
+
+                        <!--  <a href="#!" class="nav-link">
+                           
+                            <span class="pcoded-micon"><i class="feather icon-box">
+                                </i></span><span class="pcoded-mtext">Modulos
+                                </span>
+                        </a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="bc_button.html" class="">ontratistas</a></li>
+                            <li class=""><a href="bc_badges.html" class="">Inventarios</a></li>
+                            <li class=""><a href="bc_breadcrumb-pagination.html" class="">Proveedores</a></li>
+                            <li class=""><a href="bc_collapse.html" class="">clientes</a></li>
+
+                        </ul> -->
+
                         <li class="nav-item pcoded-menu-caption">
                             <label>Modulos</label>
                         </li>
 
-                      
-                             <li class="nav-item">
-                                 <a href="../signin.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Home</span></a>
+
+
+
+                        <li class="nav-item">
+                            <a href="Clientes.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Clientes</span></a>
                         </li>
-                            
-                             <li class="nav-item">
-                                 <a href="Clientes.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Clientes</span></a>
+                        <li class="nav-item">
+                            <h:form>
+                                <p class="nav-link">
+                                    <h:commandButton class="btn btn-danger" value="Cerrar sesión" action="#{userController.logout()}" />
+                                </p>
+                            </h:form>
                         </li>
-                        <li class="nav-item pcoded-menu-caption">
-                            <label></label>
-                        </li>
-                       
-                       
+
+
                     </ul>
 
                 </div>
@@ -299,8 +301,8 @@
                                         </div>
                                     </div>
                                     <!-- product profit end -->
-                                    
-                                    
+
+
                                     <!-- sessions-section start -->
                                     <div class="col-xl-8 col-md-6">
                                         <div class="card table-card">
@@ -310,7 +312,7 @@
                                             <div class="card-body px-0 py-0">
                                                 <div class="table-responsive">
                                                     <div class="session-scroll" style="height:478px;position:relative;">
-                                                       
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -325,7 +327,7 @@
                                             <div class="card-body  text-center">
                                                 <div class="usre-image">
                                                     <img src="../lite/assets/images/user/avatar-1.jpg" class="img-radius wid-100 m-auto" alt="User-Profile-Image"></img>
-                                                    
+
                                                 </div>
                                                 <h6 class="f-w-600 m-t-25 m-b-10">Administrador</h6>
                                                 <p>Active | Male | Born 23.05.1992</p>

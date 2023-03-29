@@ -20,16 +20,15 @@ import javax.persistence.Query;
 import javax.servlet.http.HttpSession;
 import service.UsersFacade;
 
-
 @ManagedBean
 @RequestScoped
 public class UserController implements Serializable {
 
     private Users user = new Users();
-    
+    private String mensaje;
+
     @EJB
-    private UsersFacade usersfacade; 
-    
+    private UsersFacade usersfacade;
 
     public String authenticate() {
         // Verificar la autenticación del usuario en la base de datos
@@ -40,13 +39,13 @@ public class UserController implements Serializable {
             session.setAttribute("user", getUser());
 
             // Redirigir a la página correspondiente según el usuario autenticado
-            if (getUser().getUsername().equals("Administrador")) {
+            if (getUser().getUsername().equals("Administrador@gmail.com")) {
                 return "/administrador/tableroAdministrador.xhtml?faces-redirect=true";
-            } else if (getUser().getUsername().equals("ResidenteDeobra")) {
+            } else if (getUser().getUsername().equals("ResidenteDeobra@gmail.com")) {
                 return "ResidenteDeobra/tableroResidente.xhtml?faces-redirect=true";
-            } else if (getUser().getUsername().equals("AsistenteAdministrativo")) {
+            } else if (getUser().getUsername().equals("AsistenteAdministrativo@gmail.com")) {
                 return "AsistenteAdministrativo/tableroAsistente.xhtml?faces-redirect=true";
-            } else if (getUser().getUsername().equals("Almacenista")) {
+            } else if (getUser().getUsername().equals("Almacenista@gmail.com")) {
                 return "Almacenista/tableroAlmacenista.xhtml?faces-redirect=true";
             } else if (getUser().getUsername().equals("cliente")) {
                 return "Cliente/tableroCliente.xhtml?faces-redirect=true";
@@ -65,7 +64,7 @@ public class UserController implements Serializable {
         // Insertar un nuevo usuario en la base de datos
         if (isValidRegistration(getUser().getUsername(), getUser().getPassword())) {
             insertUser(getUser().getUsername(), getUser().getPassword());
-            return "login.xhtml?faces-redirect=true";
+            return "signin.xhtml?faces-redirect=true";
 
         } else {
             FacesContext.getCurrentInstance().addMessage(null,
@@ -146,11 +145,20 @@ public class UserController implements Serializable {
         }
 
     }
-    
+
+    //cerrar sesion
+    public String logout() {
+        HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
+                .getExternalContext().getSession(false);
+        if (session != null) {
+            session.invalidate();
+        }
+        return "/signin.xhtml?faces-redirect=true";
+    }
+
     //list
-    
-     public List<Users> getAllusers() {
-      return usersfacade.findAll();
+    public List<Users> getAllusers() {
+        return usersfacade.findAll();
     }
 
     // Getters y setters
@@ -180,6 +188,20 @@ public class UserController implements Serializable {
      */
     public void setUsersfacade(UsersFacade usersfacade) {
         this.usersfacade = usersfacade;
+    }
+
+    /**
+     * @return the mensaje
+     */
+    public String getMensaje() {
+        return mensaje;
+    }
+
+    /**
+     * @param mensaje the mensaje to set
+     */
+    public void setMensaje(String mensaje) {
+        this.mensaje = mensaje;
     }
 
 }

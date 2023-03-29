@@ -43,7 +43,7 @@
                             <label>Navigation</label>
                         </li>
                         <li class="nav-item">
-                            <a href="tableroAlmacenista.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero Administrador</span></a>
+                            <a href="tableroAlmacenista.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero Almacenista</span></a>
                         </li>
                         <li class="nav-item pcoded-menu-caption">
                             <label>Bienvenido al  sistema molding</label>
@@ -78,8 +78,12 @@
                             <a href="Inventarios.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Inventarios</span></a>
                         </li>
                         
-                        <li class="nav-item pcoded-menu-caption">
-                            <label></label>
+                        <li class="nav-item">
+                            <h:form>
+                                <p class="nav-link">
+                                    <h:commandButton class="btn btn-danger" value="Cerrar sesión" action="#{userController.logout()}" />
+                                </p>
+                            </h:form>
                         </li>
 
 

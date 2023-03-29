@@ -44,7 +44,7 @@
                             <label>Navigation</label>
                         </li>
                         <li class="nav-item">
-                            <a href="tableroResidente.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero Administrador</span></a>
+                            <a href="tableroResidente.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero Residente</span></a>
                         </li>
                         <li class="nav-item pcoded-menu-caption">
                             <label>Bienvenido al  sistema molding</label>
@@ -76,13 +76,17 @@
                             <a href="Proveedores.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Proveedores</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="Inventarios.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Inventarios</span></a>
+                            <a href="Inventario.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Inventarios</span></a>
                         </li>
                         <li class="nav-item">
                             <a href="Clientes.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Clientes</span></a>
                         </li>
-                        <li class="nav-item pcoded-menu-caption">
-                            <label></label>
+                         <li class="nav-item">
+                            <h:form>
+                                <p class="nav-link">
+                                    <h:commandButton class="btn btn-danger" value="Cerrar sesión" action="#{userController.logout()}" />
+                                </p>
+                            </h:form>
                         </li>
 
 

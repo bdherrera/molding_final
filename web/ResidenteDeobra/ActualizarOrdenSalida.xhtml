@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-       <title>molding</title>
+        <title>molding</title>
 
         <!-- Meta -->
         <meta charset="utf-8"></meta>
@@ -27,7 +27,7 @@
 
     </h:head>
     <h:body>
-         <!-- [ navigation menu ] start -->
+        <!-- [ navigation menu ] start -->
         <nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
             <div class="navbar-wrapper ">
                 <div class="navbar-brand header-logo">
@@ -43,7 +43,7 @@
                             <label>Navigation</label>
                         </li>
                         <li class="nav-item">
-                            <a href="tableroResidente.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero Administrador</span></a>
+                            <a href="tableroResidente.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero Residente </span></a>
                         </li>
                         <li class="nav-item pcoded-menu-caption">
                             <label>Bienvenido al  sistema molding</label>
@@ -75,13 +75,17 @@
                             <a href="Proveedores.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Proveedores</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="Inventarios.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Inventarios</span></a>
+                            <a href="Inventario.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Inventarios</span></a>
                         </li>
                         <li class="nav-item">
                             <a href="Clientes.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Clientes</span></a>
                         </li>
-                        <li class="nav-item pcoded-menu-caption">
-                            <label></label>
+                        <li class="nav-item">
+                            <h:form>
+                                <p class="nav-link">
+                                    <h:commandButton class="btn btn-danger" value="Cerrar sesión" action="#{userController.logout()}" />
+                                </p>
+                            </h:form>
                         </li>
 
 
@@ -241,41 +245,41 @@
                                 <!-- [ Main Content ] start -->
 
                                 <div class="card">
-                                    
-
-
-                                        <h:form class="form-group " >
-                                            <h1><h:outputText value="Create/Edit"/></h1>
-                                            <h:panelGrid columns="2">
-
-                                                <h:outputLabel  value="Idordensalida:" for="idordensalida" />
-                                                <h:inputText class="form-control" id="idordensalida" value="#{controllerOrdenSalida.orden.idOrden}" title="Idordensalida" required="true" requiredMessage="The Idordensalida field is required."/>
-                                                <h:outputLabel value="Cantidad:" for="cantidad" />
-                                                <h:inputText class="form-control" id="cantidad" value="#{controllerOrdenSalida.orden.cantidad}" title="Cantidad" />
-                                                <h:outputLabel value="Direccion:" for="direccion" />
-                                                <h:inputText class="form-control" id="direccion" value="#{controllerOrdenSalida.orden.direccion}" title="direccion" />
-                                                <h:outputLabel  value="FechaEntrada:" for="fechaentrada" />
-                                                <h:inputText class="form-control" id="fechaentrada" value="#{controllerOrdenSalida.orden.fechaEntrada}" title="fechaentrada" />
-                                                
-                                                <h:outputLabel value="fechaSalida:" for="fechasalida" />
-                                                <h:inputText class="form-control" id="fechaSalida" value="#{controllerOrdenSalida.orden.fechaSalida}" title="fechasalida" />
-                                                
-                                                <h:outputLabel value="NombreContratista:" for="nombrecontratista" />
-                                                <h:inputText class="form-control" id="nombreContratista" value="#{controllerOrdenSalida.orden.nombreContratista}" title="nombrecontratista" />
-                                                
-                                                <h:outputLabel value="NombreMaterial:" for="nombrematerial" />
-                                                <h:inputText class="form-control" id="nombreMaterial" value="#{controllerOrdenSalida.orden.nombreMaterial}" title="nombrematerial" />
-                                            </h:panelGrid>
-
-                                            <h:commandButton action="#{controllerOrdenSalida.update(controllerOrdenSalida.orden.idOrden)}" value="Actualizar" class="btn btn-primary"></h:commandButton>
-                                            <h:commandButton class="btn btn-warning" action="OrdenSalida.xhtml" value="Volver" ></h:commandButton>
 
 
 
-                                           
-                                           
-                                        </h:form>
-                                    
+                                    <h:form class="form-group " >
+                                        <h1><h:outputText value="Create/Edit"/></h1>
+                                        <h:panelGrid columns="2">
+
+                                            <h:outputLabel  value="Idordensalida:" for="idordensalida" />
+                                            <h:inputText class="form-control" id="idordensalida" value="#{controllerOrdenSalida.orden.idOrden}" title="Idordensalida" required="true" requiredMessage="The Idordensalida field is required."/>
+                                            <h:outputLabel value="Cantidad:" for="cantidad" />
+                                            <h:inputText class="form-control" id="cantidad" value="#{controllerOrdenSalida.orden.cantidad}" title="Cantidad" />
+                                            <h:outputLabel value="Direccion:" for="direccion" />
+                                            <h:inputText class="form-control" id="direccion" value="#{controllerOrdenSalida.orden.direccion}" title="direccion" />
+                                            <h:outputLabel  value="FechaEntrada:" for="fechaentrada" />
+                                            <h:inputText class="form-control" id="fechaentrada" value="#{controllerOrdenSalida.orden.fechaEntrada}" title="fechaentrada" />
+
+                                            <h:outputLabel value="fechaSalida:" for="fechasalida" />
+                                            <h:inputText class="form-control" id="fechaSalida" value="#{controllerOrdenSalida.orden.fechaSalida}" title="fechasalida" />
+
+                                            <h:outputLabel value="NombreContratista:" for="nombrecontratista" />
+                                            <h:inputText class="form-control" id="nombreContratista" value="#{controllerOrdenSalida.orden.nombreContratista}" title="nombrecontratista" />
+
+                                            <h:outputLabel value="NombreMaterial:" for="nombrematerial" />
+                                            <h:inputText class="form-control" id="nombreMaterial" value="#{controllerOrdenSalida.orden.nombreMaterial}" title="nombrematerial" />
+                                        </h:panelGrid>
+
+                                        <h:commandButton action="#{controllerOrdenSalida.update(controllerOrdenSalida.orden.idOrden)}" value="Actualizar" class="btn btn-primary"></h:commandButton>
+                                        <h:commandButton class="btn btn-warning" action="OrdenSalida.xhtml" value="Volver" ></h:commandButton>
+
+
+
+
+
+                                    </h:form>
+
 
 
                                 </div>

@@ -45,7 +45,7 @@
                             <label>Navigation</label>
                         </li>
                         <li class="nav-item">
-                            <a href="tableroResidente.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero Administrador</span></a>
+                            <a href="tableroResidente.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero Residente</span></a>
                         </li>
                         <li class="nav-item pcoded-menu-caption">
                             <label>Bienvenido al  sistema molding</label>
@@ -77,13 +77,17 @@
                             <a href="Proveedores.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Proveedores</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="Inventarios.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Inventarios</span></a>
+                            <a href="Inventario.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Inventarios</span></a>
                         </li>
                         <li class="nav-item">
                             <a href="Clientes.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Clientes</span></a>
                         </li>
-                        <li class="nav-item pcoded-menu-caption">
-                            <label></label>
+                        <li class="nav-item">
+                            <h:form>
+                                <p class="nav-link">
+                                    <h:commandButton class="btn btn-danger" value="Cerrar sesión" action="#{userController.logout()}" />
+                                </p>
+                            </h:form>
                         </li>
 
 
@@ -252,8 +256,8 @@
 
                                                 <h:outputLabel  value="Idcontratistas:" for="idcontratistas" />
                                                 <h:inputText class="form-control" id="idcontratistas" value="#{controllerContratistas.contratista.idcontratistas}" title="Idcontratistas" required="true" requiredMessage="The Idcontratistas field is required."/>
-                                                 <h:outputLabel  value="Rut:" for="Rut" />
-                                                 <h:inputText class="form-control" id="Rut" value="#{controllerContratistas.contratista.rut}" title="Rut" required="true" requiredMessage="The Idcontratistas field is required."/>
+                                                <h:outputLabel  value="Rut:" for="Rut" />
+                                                <h:inputText class="form-control" id="Rut" value="#{controllerContratistas.contratista.rut}" title="Rut" required="true" requiredMessage="The Idcontratistas field is required."/>
                                                 <h:outputLabel value="NombreContratista:" for="nombreContratista" />
                                                 <h:inputText class="form-control" id="nombreContratista" value="#{controllerContratistas.contratista.nombreContratista}" title="NombreContratista" />
                                                 <h:outputLabel value="FechaContrato:" for="fechaContrato" />
@@ -273,8 +277,8 @@
 
 
 
-                                           
-                                           
+
+
                                         </h:form>
                                     </f:view>
 

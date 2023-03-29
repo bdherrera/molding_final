@@ -27,7 +27,7 @@
 
     </h:head>
     <h:body>
-           <!-- [ navigation menu ] start -->
+        <!-- [ navigation menu ] start -->
         <nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
             <div class="navbar-wrapper ">
                 <div class="navbar-brand header-logo">
@@ -43,7 +43,7 @@
                             <label>Navigation</label>
                         </li>
                         <li class="nav-item">
-                            <a href="tableroResidente.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero Administrador</span></a>
+                            <a href="tableroResidente.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Tablero Residente</span></a>
                         </li>
                         <li class="nav-item pcoded-menu-caption">
                             <label>Bienvenido al  sistema molding</label>
@@ -75,13 +75,17 @@
                             <a href="Proveedores.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Proveedores</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="Inventarios.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Inventarios</span></a>
+                            <a href="Inventario.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Inventarios</span></a>
                         </li>
                         <li class="nav-item">
                             <a href="Clientes.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Clientes</span></a>
                         </li>
-                        <li class="nav-item pcoded-menu-caption">
-                            <label></label>
+                        <li class="nav-item">
+                            <h:form>
+                                <p class="nav-link">
+                                    <h:commandButton class="btn btn-danger" value="Cerrar sesión" action="#{userController.logout()}" />
+                                </p>
+                            </h:form>
                         </li>
 
 
@@ -241,33 +245,33 @@
                                 <!-- [ Main Content ] start -->
 
                                 <div class="card">
-                                    
 
 
-                                        <h:form class="form-group " >
-                                            <h1><h:outputText value="Actualizar"/></h1>
-                                            <h:panelGrid columns="2">
 
-                                                <h:outputLabel  value="IdMateriales:" for="idmateriales" />
-                                                <h:inputText class="form-control" id="idmateriales" value="#{controllerMateriales.material.idMateriales}" title="Idmateriales" required="true" requiredMessage="The Idmateriales field is required."/>
-                                                <h:outputLabel value="NombreMateriales:" for="nombreMateriales" />
-                                                <h:inputText class="form-control" id="nombreMateriales" value="#{controllerMateriales.material.nombre}" title="NombreMateriales" />
-                                                <h:outputLabel value="cantidad:" for="cantidad" />
-                                                <h:inputText class="form-control" id="cantidad" value="#{controllerMateriales.material.cantidad}" title="cantidad" />
-                                                <h:outputLabel  value="estado:" for="estado" />
-                                                <h:inputText class="form-control" id="estado" value="#{controllerMateriales.material.estado}" title="estado" />
-                                                
-                                            </h:panelGrid>
+                                    <h:form class="form-group " >
+                                        <h1><h:outputText value="Actualizar"/></h1>
+                                        <h:panelGrid columns="2">
 
-                                            <h:commandButton action="#{controllerMateriales.update(controllerMateriales.material.idMateriales)}" value="Actualizar" class="btn btn-primary"></h:commandButton>
-                                            
-                                            <h:commandButton action="Inventarios.xhtml" class="btn btn-warning" value="Volver" ></h:commandButton>
+                                            <h:outputLabel  value="IdMateriales:" for="idmateriales" />
+                                            <h:inputText class="form-control" id="idmateriales" value="#{controllerMateriales.material.idMateriales}" title="Idmateriales" required="true" requiredMessage="The Idmateriales field is required."/>
+                                            <h:outputLabel value="NombreMateriales:" for="nombreMateriales" />
+                                            <h:inputText class="form-control" id="nombreMateriales" value="#{controllerMateriales.material.nombre}" title="NombreMateriales" />
+                                            <h:outputLabel value="cantidad:" for="cantidad" />
+                                            <h:inputText class="form-control" id="cantidad" value="#{controllerMateriales.material.cantidad}" title="cantidad" />
+                                            <h:outputLabel  value="estado:" for="estado" />
+                                            <h:inputText class="form-control" id="estado" value="#{controllerMateriales.material.estado}" title="estado" />
+
+                                        </h:panelGrid>
+
+                                        <h:commandButton action="#{controllerMateriales.update(controllerMateriales.material.idMateriales)}" value="Actualizar" class="btn btn-primary"></h:commandButton>
+
+                                        <h:commandButton action="Inventarios.xhtml" class="btn btn-warning" value="Volver" ></h:commandButton>
 
 
-                                           
-                                           
-                                        </h:form>
-                                    
+
+
+                                    </h:form>
+
 
 
                                 </div>

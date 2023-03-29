@@ -71,9 +71,16 @@
                             <a href="Usuarios.xhtml" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Crear usuario</span></a>
                         </li>
 
-                        <li class="nav-item pcoded-menu-caption">
-                            <label></label>
+
+                        <li class="nav-item">
+                            <h:form>
+                                <p class="nav-link">
+                                    <h:commandButton class="btn btn-danger" value="Cerrar sesión" action="#{userController.logout()}" />
+                                </p>
+                            </h:form>
+
                         </li>
+
 
 
                     </ul>
@@ -355,7 +362,6 @@
                                             <div class="card-body  text-center">
                                                 <div class="usre-image">
                                                     <img src="../lite/assets/images/user/avatar-1.jpg" class="img-radius wid-100 m-auto" alt="User-Profile-Image"></img>
-
                                                 </div>
                                                 <h6 class="f-w-600 m-t-25 m-b-10">Administrador</h6>
                                                 <p>Construcion | Bogota |  01.04.2023</p>

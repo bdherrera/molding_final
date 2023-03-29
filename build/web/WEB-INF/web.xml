@@ -219,8 +219,67 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/Almacenista/ActualizarOrdenEntrada.xhtml</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/Almacenista/ActualizarInventario.xhtml</url-pattern>
     </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/Inventario.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/ActualizarInventario.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/Clientes.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/Contratistas.xhtml</url-pattern>
+    </servlet-mapping>
+   
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/Proveedores.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/ActualizarContratistas.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/ActualizarInventario.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/ActualizarOrdenEntrada.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/ActualizarOrdenSalida.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/OrdenSalida.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/ordenEntrada.xhtml</url-pattern>
+    </servlet-mapping>
+     
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/ResidenteDeobra/ActualizarProveedores.xhtml</url-pattern>
+    </servlet-mapping>
+    
+    
 </web-app>
